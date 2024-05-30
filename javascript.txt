@@ -1,0 +1,594 @@
+JavaScript
+-------------
+procedural programming - it is a programming paradigm(style of programming) where series of computational steps are carried out.
+unlike oops where datas and methods were tied together(encapsulation) in to class and object, procedural programming uses data and functions as two different entites
+-JavaScript version ES6
+it can be used in both frontend as well as backend
+frontend - behaviour (browser)
+backend - logical operations (node js)
+it also known as single thread programming
+line by line execution
+Dynamically typed language 
+
+backend
+-----------
+node js - its an open source JavaScript runtime environment that execute js code outside the web browser
+to save - filename.js
+for display - console.log(content)
+	 -console.log("output is",value);
+to open terminal - ctrl+j
+
+datatypes
+------------
+1.primitive datatypes (unique)
+-------------------------
+a.string - contents in double quotes
+b.number - float and integer
+c.boolean - true or false
+d.bigInt - large numbers (numbers larger than 2^53 and numbers lessthan -2^53)
+e.undefined - variables declared but values are not assigned eg: let x;
+f.null - null value let x=null;
+g.symbol - to provide unique identifier
+
+2.Non-primitive datatypes
+(combination of primitive datatypes)
+------------------------------------------------
+object - values are stored as key:value pairs 
+
+Variables
+------------
+variables are used to store data
+identifiers - rules to create variables
+1.it can be started with alphabets, dollar symbol($) or underscore(_)
+2.First character can be followed by alphabets, dollar, underscore and digits.
+3.Digits cannot be placed as the first character
+4.can use more than one words , but the words should not have space
+ - second word can start with capital letter (camel case) or use underscore to separate words.
+
+syntax : variable_name = value ;
+eg : x=10;
+keyword variable_name = value;
+keyword : predefined/reserved set of words which gives a special meaning to the variable.
+                   1.const - Reassigning not possible ( hoisting not possible )
+                   2.var - Reassigning is possible ( hoisting possible )
+                   3.let - Reassigning possible  - block level (starting from one curly bracket and ends with another curly bracket{}) - hoisting not possible
+variable hoisting : using a variable before it is declared
+eg: console.log(x)
+      x=10;
+
+concatination(addition)
+-----------------------
+- simply refers to adding two datatypes
+- number + number gives number
+    eg: x=10+10;
+    console.log(x) gives 20
+-string + string gives string 
+    eg: x= "10" + "20"
+    console.log(x) gives 1020
+-string + number gives string 
+    eg: x= 10 + "20"
+    console.log(x) gives 1020
+
+Template literals
+-----------------
+-another way of displaying contents 
+`content ${variable_name}`
+OPERATORS
+---------
+1.Arithmetic Operators {+(add), -(minus), /(div), *(multi), **(^ exponential(power)), %(modulas)}
+eg: x=5;
+y=10;
+console.log(`sum of ${x} and ${y} is ${x+y}`)
+console.log(`sub of ${x} and ${y} is ${x-y}`)
+console.log(`product of ${x} and ${y} is ${x*y}`)
+console.log(`remainder of ${x} and ${y} is ${x%y}`)
+console.log(`div of ${x} and ${y} is ${x/y}`)
+
+2.Assignment Operators {=}
+
+3.Relational Operators {>,>=,<,<=,==,===}
+- == value (left value is same as right value) - comparison 
+- === check  value and datatypes and return true or false 
+
+4.logical operators {&&(and), ||(or), !(not)} - returns boolean values
+- &&(and) - returns true when the two operations are true
+    T && T - T
+    T && F - F
+    F && T - F 
+    F && F - F 
+-||(or) - returns true when atleast one operation is true
+    T || T - T 
+    T || F - T 
+    F || T - T 
+    F || F - F
+- !(not) - gives opposite
+
+
+5.increment and decrement operators
+----------------------------------
+increment (++) - add 1 to the current value
+decrement(--) - substract 1 from the current value
+
+6.short hand operators
+----------------------
+x=x+y;
+using short hand operators it can be wriiten as x+=y
+
+7.ternary operators
+-------------------
+syntax : condition?true statement:false statement
+
+conditional statements / decision making statements
+---------------------------------------------------
+1.if else
+---------
+syntax :
+if(condition){
+    statements;
+}
+else{
+    statements;
+}
+2.if else if
+------------
+if(condition){
+    statements;
+}
+else if(condition){
+    statements;
+}
+else{
+    statements;
+}
+
+looping statements
+-----------------
+-to do task repeatedly
+1.while
+2.for 
+
+1.while
+--------
+syntax
+variable initialisation
+while(condition){
+    statement
+    exit condition
+}
+
+2.for
+-----
+syntax
+for(variable initialisation;condition;exit condition){
+    statements;
+}
+3.nested loops
+--------------
+loop within another loop
+
+function
+---------
+-functions are used to do task repeated at different position
+-variables inside a function is having block scope
+-to access the variable outside we need to return the variable
+-no statement after the return statement will be executed.so return statement should be placed as the last statement of the function.
+part of functions
+------------------
+1)function definition
+    -statement
+    -syntax
+     -------
+     function name(arguments/parameters){
+        statements
+     }
+2)function call
+    -to execute the function
+    -syntax
+     name()
+
+arguments or parameters - the values given to a function to do a certain task (it provide inside the bracket)
+
+functional hoisting
+-------------------
+- calling a function  before a function is defined
+- normal function have functional hoisting
+
+2)Arrow function
+---------------
+-ES6 
+-syntax
+--------
+const variable = (arguments)=>{
+    statement
+}
+-functional hoisting is not possible
+
+3)predefined functions
+----------------------
+- built in function of a particular language
+eg: console.log()
+    typeOf()
+    parseInt()
+    Math.floor()
+    Alert()
+
+4)call back function
+--------------------
+- function calling another function
+- call back function comes as an argument to the another function
+
+5)nested function
+-----------------
+- function definition inside another function
+- closure property:property of a parent function can be accessed inside a child function but not vice versa
+
+asynchronous functions - functions with time delay(set timeout api calling)
+synchronous - functions without time delay(console.log)
+
+
+Data Structure
+---------------
+-used for storing datas
+- a specialised format of organizing , processing retrieving and storing data.
+- array , stack , queue , list linkedlist , tree, graph , hash etc..
+
+
+Array 
+------
+-datatype object
+-unlike variables array can store more than one data(can be any type)
+definition: Array is a single variable which can store more than one value that are separated by comas and enclosed within a square bracket.
+
+-syntax
+-------
+keyword arrayname = [item1, item2,........item]
+
+-stored has key value pairs
+key => index
+value => items of the array
+
+index => indicate the position of item in an array
+      => its value starts from 0
+
+length = total no.of items/memory locations
+       => starts from 1
+
+array methods
+--------------
+1)push - to add items to the end of an array
+2)pop - to remove an item from an array
+3)unshift - to add item to the start of an array
+4)shift - to remove an item from the start 
+5)sort() - to arrange an array in ascending or descending order
+6)flat()- it changes the dimension of an array - it returns in array format 2D->1D eg:array10,11,12
+7)map() - for - return an array of same no.of element is that of its parent eg:array13.js
+
+8)forEach() - same as that of for of loop- return void - so that further activities(array methods)cannot be executed
+9)reduce() - returns a single value (highest, lowest, average, sum, etc...)
+10)filter() - it returns an array satisfying a specific condition.
+            arrayname.filter(variable=>condition)
+11)some - it returns true or false based on the conditio applied to an array
+12)find() - it returns the first element that satisfies the condition.
+13)includes - to check an item present in the array or not
+14)indexOf() - to find the index of a given element in an array
+15)splice() - to add and remove items at a particular positions
+              array.splice(index,how many items to be removed,items to be added)
+16)slice() - method used to extract a section of an array and return a new array without modifying the original array
+                syntax  array.slice(startIndex,endIndex)
+                 end index will not be included(excluded)
+                 negative(-) value also can be provided and it takes from the back side
+17)reduceRight() - iteration starts from right and reduce into a single value
+
+different way to access array item
+----------------------------------
+1)for loop
+2)in - directly access the index of an array with explicitly writing the condition and increment operators.
+3)of - directly access the items in an array
+
+Binary Search
+-------------
+- reduces the time delay (better than linear search)
+-array should be arranged in ascending order
+
+nested array
+--------------
+-array within another array
+
+String methods
+--------------
+1)startsWith() - to check whether the string is starts with a particular character
+               -returns boolean values
+               -case sensitive
+                eg: str=luminar
+                str.startsWith('lum')
+                o/p:true
+2)endsWith() - to check whether the string is ends with a particular  character
+             -case sensitive
+             -return boolean values
+3)toUpperCase() - to convert the given string in Upper Case
+4)tolowerCase() - to convert the given string in lowercase
+5)trim() - to remove blank space at the ends
+6)substring() - to create a substring from a given string
+                string.subString(startIndex, endIndex)
+              -endIndex is excluded
+7)slice() - similar to substring but accept negative values(starts from end of the string)
+          - string.slice(startIndex,endIndex)
+8)split() - divide the given string into substring based on particular value
+          - it returns array
+9)replace() - string.replace("searchValue","replaceValue")
+            - only replace first matching words
+10)replaceall() - replace all the matching words 
+11)Array.from() - split the string into letters and return as array
+                - eg:c="good morning"
+                        d=Array.from(c)
+                        console.log(d);
+                     o/p:[
+                            'g', 'o', 'o', 'd',
+                            ' ', 'm', 'o', 'r',
+                            'n', 'i', 'n', 'g'
+                         ]
+
+object
+-------
+-object is also used to store more than one data with more clarity
+-definition : object is a single variable that can hold more than one data of different datatype as key:value pairs that are separated by commas and enclosed in curly brackets
+
+syntax
+------
+objectname={
+    key:value;
+    ........
+    key:value;
+}
+
+access method
+------------
+1)in method - is used to follow the keys in the object.
+2)of - directly access the item in an array
+
+add
+----
+how to add a key value pair into an object
+objectname['key']=value
+
+delete - delete method
+syntax delete objectname.key
+
+update - 
+syntax objectname.key+=value
+
+
+
+oops
+-----
+pillers
+--------
+1)inheritance - is a mechanism used to access methods(functions) and properties(variables) from other class
+              - parent class - super class / base class
+              - child class - drived class / sub class
+              - keyword : extends - classical inheritance
+
+a)object inheritance - keyword - __proto__
+b)multilevel inheritance
+2) Polymorphism - poly means many and morphism means form
+a)method / function overloading - methods with same name but with different arguments
+                                -a()
+                                -a(arg)
+                                -a(arg1,arg2)
+                                it executes based on the no. of arguments
+                                -JavaScript does not support method overloading 
+                                -it only execute the last method
+                                - to achieve method overloading rest operator is used
+                                - rest operator(...)- it returns arguments as array
+b)method / overriding - method with same name and same no.of arguments 
+                      - the last written method.
+                      - JavaScript support this concept
+3)encapsulation
+4)Abstraction
+
+Exception handling / error handling
+------------------------------------
+-runtime errors
+-try-catch block
+-at a time any one block works,either try or catch
+syntax
+-------
+try{
+    statements that can commit error
+}
+catch{
+    statement to handle error
+}
+finally{
+    statement that have to be executed in both case
+}
+
+
+----------------------------------------------------------------------------------------------------------------
+------------------------------------------JavaScript - frontend--------------------------------------------
+Browser - application programme which provides an imterface for user to interact with all information available in the www.
+browser understanding language - Html , css , JavaScript
+JavaScript - behaviour - html,css
+JavaScript access DOM(Document Object Model)
+
+DOM(Document Object Model)
+--------------------------
+- created by browser
+- its a tree structure of the html Document
+
+BOM - (Browser Object Model)
+
+how to use js file
+------------------
+1)internal
+<script>
+logical
+</script>
+-after body tag
+2)external
+create an external file with extension as .js
+-<script src='path'/>
+
+how to access html tags
+------------------------
+1)document.getElementByTagName('tagname') - return htmlcollection(array)
+2)document.getElementById('id') - return directly the tag
+3)document.getElementByClassName('classname') - return html collection
+4)document.querySelector(tag/id/class) - it return first satisfying tag
+5)document.querySelectorAll(tag/id/class) - NodeList array
+
+
+how to change the content in a tag
+-----------------------------------
+-innerHTML
+
+-EVENTS 
+--------
+-Actions that can lead to an update in DOM
+eg: 1)click
+    2)submit
+    3)load
+    4)change
+    5}keydown
+
+JSON.stringify - to convert object into string
+JSON.parse - to convert string into object
+
+Database
+---------
+- it is used to store data
+- key value pairs
+-both key and value should be string
+-large amount of data can be stored
+
+browser storage : to store data 
+-limited amount of data csn be stored
+
+1)local storage
+- data will be stored permanently
+
+operations in local storage
+---------------------------
+1)localstorage.setItem("key",value) - to add data to local storage 
+2)localstorage.getItem("key") - to retrieve the data from local storage
+3)localstorage.removeItem("key") - to delete the data from local storage
+
+
+
+
+2)session storage
+- not a permanent storage
+- remove when the session expires
+
+
+API - Application Programming Interface
+----------------------------------------
+- it is used to communicate between two application available in internet
+
+types of API - based on scope
+-------------
+1)public API - globally available
+2)private API 
+3)partner API
+4)composite API
+ 
+http - HyperText Transfer Protocol
+-----------------------------------
+https, ftp, smtp, tcp, udp
+
+http methods
+------------
+1)get method - to retrieve data.
+2)post method - to add data
+3)put method -  to update the data
+4)delete method - to remove data
+
+request have two parts
+-----------------------
+1)header (type of data , token etc...) - content type and authentication keys
+2)body - holds data to be shared
+
+JSON format - JavaScript Object Notation
+- common format for data sharing
+
+syntax
+------
+{
+    "key":"value"
+}
+rules
+----
+- data should be shared as key:value pairs
+- both key and value should be string
+- each key:value pairs should be separated by commas and enclosed within curly bracket
+- if the shared data is an array then enclosed in square bracket
+
+response status
+---------------
+1)1xx series(0-99) - information
+2)2xx series - success
+3)3xx series - redirection
+4)4xx series - client side error
+5)5xx series - server side error 
+
+URL - uniform resource locator
+-----------------------------
+- it is the resource address in internet
+
+RESTFUL API - representational state transfer
+---------------------------------------------
+it is a software architecture style that was created to guide the design and development of web.
+
+refer
+----
+SOAP , RPC
+
+API testing tool
+-----------------
+- Thunder client - vs code extention
+- Postman - real tool for testing API
+
+how to create API
+------------------
+1)AJAX - Asynchronous(have timedelay) JavaScript XML
+------------------------------------
+    -XMLHTTPREQUEST class used
+    -open() - api connection establishment
+    -send() - used to send the request
+    -readystate - is the property inside the class which value will change from 1-4
+    -this change can be seen using onreadystatechange function
+    -response will only be obtained when the value of readystate reaches 4
+    -responseText is the property inside the class where we get the data.
+
+
+2)FETCH 
+--------
+    -ES6 version
+    -promise class
+    -to resolve asynchronous function
+    -three state
+        -i)  resolve - .then()
+        -ii) reject - .catch()
+        -iii)pending - not resolved and not rejected  
+    
+3)ASYNC AWAIT
+---------------
+    -it makes the promise easier to write 
+    - .then() is used only once 
+    -can store that data into a variable
+    -async makes the function return promise
+    -awaits makes the function pause the execution and wait for a resolved promise before it continues
+    -awaits should always written inside the async function 
+    -it avoid call back hell
+
+How JavaScript handles asynchronous and synchronous function being a single thread programming language
+-------------------------------------------------------------------------------------------------------
+- synchronous functions(without time delay function) are stored first in call stack
+- asynchronous functions are in queue
+- micro task queue - asynchronous functions with priority
+- call back queue - asynchronous functions without priority
+- the function only executes when it reaches to the call stack
+- both synchronous and asynchronous function are not stored together
+
+
+
